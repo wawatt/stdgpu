@@ -7,11 +7,9 @@ project(stdgpu VERSION 1.3.0
                DESCRIPTION "Efficient STL-like Data Structures on the GPU"
                LANGUAGES CXX)
 set(CUDA_TOOLKIT_ROOT_DIR "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8" CACH INTERNAL "")
+set (CMAKE_CUDA_COMPILER "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin/nvcc.exe")
 find_package(CUDA REQUIRED)
-message("CUDA found (include: ${CUDA_INCLUDE_DIRS})")
-include_directories(${CUDA_INCLUDE_DIRS})
-message("CUDA found (lib: ${CUDA_LIBRARIES})")
-link_directories(${CUDA_LIBRARY_DIRS})
+
 
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     set(STDGPU_SETUP_COMPILER_FLAGS_DEFAULT ON)
