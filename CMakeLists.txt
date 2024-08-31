@@ -5,7 +5,7 @@ message(STATUS "Configuring with CMake ${CMAKE_VERSION}")
 project(stdgpu VERSION 1.3.0
                DESCRIPTION "Efficient STL-like Data Structures on the GPU"
                LANGUAGES CXX)
-
+find_package(CUDA REQUIRED)
 
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     set(STDGPU_SETUP_COMPILER_FLAGS_DEFAULT ON)
