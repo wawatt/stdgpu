@@ -59,7 +59,7 @@ if(STDGPU_BACKEND STREQUAL STDGPU_BACKEND_CUDA)
         set(STDGPU_CUDA_ARCHITECTURE_FLAGS_USER ${CMAKE_CUDA_ARCHITECTURES})
     endif()
 
-    enable_language(CUDA)
+    #enable_language(CUDA)
 elseif(STDGPU_BACKEND STREQUAL STDGPU_BACKEND_HIP)
     cmake_minimum_required(VERSION 3.21.3...3.30)
 
